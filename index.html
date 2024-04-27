@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="List-container" id="List-container">
+
+    </div>
+ 
+    <div class="action-container">
+        <input type="text" id="input-todo"/>
+        <button  onclick="add()">
+            Add
+        </button>
+        <button  onclick="show()">
+            show
+        </button>
+    </div>
+        <script>
+            const todoList = []
+            function add(){
+                const inputElement=document.getElementById('input-todo')
+                todoList.push(inputElement.value)
+                inputElement.value = ""
+            }
+
+            function show(){
+                const Listcontainer=document.getElementById('List-container')
+                Listcontainer.innerHTML=""
+                
+             
+            }
+
+        </script>
+
+
+    
+</body>
+</html>
