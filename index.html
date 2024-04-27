@@ -17,8 +17,9 @@
             display:block;
             margin:40px auto;
             padding:10px;
-            border-radius:5px;
+            border-radius:10px;
             height:300px;
+            width:350px;
             overflow-y:scroll;
 
         }
@@ -32,18 +33,37 @@
             margin: 3px;
 
         }
+        .inputtext{
+            border-radius:5px;
+            margin:3px;
+        }
+        .addbtn{
+            margin:3px;
+            border-radius:3px;
+            background-color: rgb(230, 175, 169);
+            padding:4px;
+            width:60px;
+        }
+        .task{
+            display:flex;
+            justify-content:center; 
+            color:rgb(246, 53, 143);
+        }
 
 
     </style>
 </head>
 <body>
+    <h1 class="task">
+     Add task !
+    </h1>
     <div class="List-container" id="List-container">
 
     </div>
  
     <div class="action-container">
-        <input type="text" id="input-todo"/>
-        <button  onclick="add()">
+        <input type="text" id="input-todo" class="inputtext"/>
+        <button  class="addbtn" onclick="add()">
             Add
         </button>
        
