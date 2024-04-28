@@ -68,7 +68,12 @@
     </div>
         <script>
             let todoList = []
-         
+            const ListFromLocalStorage = localStorage.getItem("todoList");
+           
+           if(ListFromLocalStorage){
+               todoList = JSON.parse(ListFromLocalStorage);  
+               renderToDoList()
+           }
             function add(){
                 const inputElement=document.getElementById('input-todo')
                 todoList.push(inputElement.value)
